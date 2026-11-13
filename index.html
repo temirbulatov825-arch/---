@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ВОЛЬТ СЕРВИС — электромонтаж под ключ в Наро-Фоминске и районе. Замена проводки, розетки, щитки, подключение техники, аварийный выезд 24/7. Гарантия, без пыли.">
+<meta name="keywords" content="электромонтаж Наро-Фоминск, замена проводки, установка розеток, электрощиток, аварийный электрик, подключение техники">
+<meta name="author" content="ВОЛЬТ СЕРВИС">
+<meta property="og:title" content="ВОЛЬТ СЕРВИС — Электромонтаж под ключ в Наро-Фоминске">
+<meta property="og:description" content="Замена проводки, розетки, щитки, подключение техники. Работаем в паре, гарантия, выезд 24/7.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230b0b0b'/%3E%3Ctext x='50' y='65' font-size='70' text-anchor='middle' fill='%23ffd200'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+<title>ВОЛЬТ СЕРВИС — Электромонтаж под ключ</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #0b0b0b;
+    color: #fff;
+    line-height: 1.6;
+  }
+  .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+  a { color: #ffd200; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .accent { color: #ffd200; }
+
+  header {
+    background: #111;
+    border-bottom: 1px solid #222;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 800;
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
+  }
+  .logo span { color: #ffd200; }
+  .nav-links {
+    display: none;
+    gap: 24px;
+    list-style: none;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { color: #ccc; font-size: 0.95rem; }
+  .nav-links a:hover { color: #fff; }
+  .btn-call {
+    background: #ffd200;
+    color: #000;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+  .btn-call:hover { background: #e6b800; text-decoration: none; }
+  .menu-toggle {
+    background: none;
+    border: 1px solid #444;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+  }
+
+  .hero {
+    background: linear-gradient(180deg, #111 0%, #0a0a0a 100%);
+    padding: 60px 20px 50px;
+    text-align: center;
+    border-bottom: 1px solid #222;
+  }
+  .hero h1 { font-size: 2.5rem; margin-bottom: 16px; line-height: 1.2; }
+  .hero h1 .accent { color: #ffd200; }
+  .hero p { color: #aaa; font-size: 1.1rem; max-width: 650px; margin: 0 auto 28px; }
+  .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-block;
+    padding: 14px 26px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  .btn-primary { background: #ffd200; color: #000; }
+  .btn-primary:hover { background: #e6b800; text-decoration: none; }
+  .btn-outline { background: transparent; color: #fff; border: 1px solid #444; }
+  .btn-outline:hover { border-color: #ffd200; color: #ffd200; text-decoration: none; }
+
+  .section { padding: 50px 20px; }
+  .section-title {
+    text-align: center;
+    font-size: 1.75rem;
+    margin-bottom: 8px;
+  }
+  .section-subtitle {
+    text-align: center;
+    color: #888;
+    margin-bottom: 40px;
+    font-size: 1rem;
+  }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+  .service-card {
+    background: #141414;
+    border: 1px solid #222;
+    border-radius: 10px;
+    padding: 24px 20px;
+    transition: transform .2s, border-color .2s;
+  }
+  .service-card:hover { border-color: #ffd200; transform: translateY(-4px); }
+  .service-card h3 { font-size: 1.1rem; margin-bottom: 10px; color: #ffd200; }
+  .service-card p { color: #aaa; font-size: 0.95rem; }
+
+  .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+  .benefit {
+    background: #141414;
+    border: 1px solid #222;
+    border-radius: 10px;
+    padding: 24px 20px;
+    text-align: center;
+  }
+  .benefit .num {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffd200;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .benefit h4 { font-size: 1rem; margin-bottom: 8px; }
+  .benefit p { color: #aaa; font-size: 0.9rem; }
+
+  .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+  .portfolio-item {
+    background: #141414;
+    border: 1px solid #222;
+    border-radius: 10px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    position: relative;
+  }
+  .portfolio-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .portfolio-item::after {
+    content: attr(data-title);
+    position: absolute; inset: 0;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    font-weight: 700;
+    display: flex; align-items: flex-end; padding: 14px;
+    opacity: 0; transition: opacity .2s;
+  }
+  .portfolio-item:hover::after { opacity: 1; }
+
+  .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .review {
+    background: #141414;
+    border: 1px solid #222;
+    border-radius: 10px;
+    padding: 24px 20px;
+  }
+  .review .stars { color: #ffd200; font-size: 1.2rem; margin-bottom: 8px; }
+  .review p { color: #aaa; font-size: 0.95rem; margin-bottom: 12px; }
+  .review .author { font-weight: 700; color: #fff; font-size: 0.95rem; }
+  .review .author span { color: #888; font-weight: 400; }
+
+  .faq-grid { display: grid; gap: 12px; max-width: 700px; margin: 0 auto; }
+  .faq-item { background: #141414; border: 1px solid #222; border-radius: 8px; overflow: hidden; }
+  .faq-question {
+    width: 100%; text-align: left; padding: 16px 20px;
+    background: transparent; border: none; color: #fff;
+    font-size: 1rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+  }
+  .faq-question:hover { background: #1a1a1a; }
+  .faq-answer {
+    padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height .3s, padding .3s;
+    color: #aaa; font-size: 0.95rem; line-height: 1.5;
+  }
+  .faq-item.open .faq-answer { max-height: 200px; padding: 0 20px 16px; }
+  .faq-toggle { font-size: 1.2rem; }
+
+  .form-wrap {
+    background: #141414;
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 32px 24px;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+  .form-wrap h3 { text-align: center; margin-bottom: 24px; font-size: 1.5rem; }
+  .form-group { margin-bottom: 18px; }
+  .form-group label { display: block; margin-bottom: 6px; color: #ccc; font-size: 0.9rem; }
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    padding: 12px 14px;
+    background: #0f0f0f;
+    border: 1px solid #333;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1rem;
+  }
+  .form-group input::placeholder { color: #666; }
+  .form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #ffd200;
+  }
+  .btn-submit {
+    width: 100%;
+    background: #ffd200;
+    color: #000;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  .btn-submit:hover { background: #e6b800; }
+  .form-msg { margin-top: 14px; text-align: center; font-size: 0.95rem; color: #4ade80; display: none; }
+
+  .contacts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+  }
+  .contact-card {
+    background: #141414;
+    border: 1px solid #222;
+    border-radius: 10px;
+    padding: 24px 20px;
+    text-align: center;
+  }
+  .contact-card h4 { margin-bottom: 10px; color: #ffd200; }
+  .contact-card p { color: #aaa; font-size: 0.95rem; margin-bottom: 12px; }
+  .contact-card .btn { width: 100%; }
+
+  .map-wrap {
+    border: 1px solid #222;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 24px;
+    aspect-ratio: 16 / 9;
+  }
+  .map-wrap iframe { width: 100%; height: 100%; border: 0; }
+
+  footer {
+    background: #0a0a0a;
+    border-top: 1px solid #1a1a1a;
+    padding: 30px 20px;
+    text-align: center;
+    color: #666;
+    font-size: 0.85rem;
+  }
+
+  .scroll-top {
+    position: fixed; right: 20px; bottom: 20px;
+    background: #ffd200; color: #000;
+    border: none; border-radius: 6px;
+    width: 48px; height: 48px;
+    font-size: 1.4rem; cursor: pointer;
+    opacity: 0; visibility: hidden; transition: opacity .3s, visibility .3s;
+    z-index: 99;
+  }
+  .scroll-top.show { opacity: 1; visibility: visible; }
+
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 1.9rem; }
+    .nav-links { display: none; }
+    .menu-toggle { display: block; }
+    .hero-actions { flex-direction: column; align-items: center; }
+    .btn { width: 100%; max-width: 260px; text-align: center; }
+  }
+  @media (min-width: 641px) {
+    .nav-links { display: flex; }
+    .menu-toggle { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="topbar container">
+    <div class="logo">
+      <span class="accent">⚡</span> ВОЛЬТ<span class="accent"> СЕРВИС</span>
+      <div style="font-size:0.78rem; color:#888; margin-left:4px;">Электромонтаж</div>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#services">Услуги</a></li>
+      <li><a href="#about">Преимущества</a></li>
+      <li><a href="#portfolio">Работы</a></li>
+      <li><a href="#reviews">Отзывы</a></li>
+      <li><a href="#order">Заявка</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+    </ul>
+
+    <button class="menu-toggle" id="menuToggle">Меню</button>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Электромонтаж <span class="accent">под ключ</span><br>в Наро-Фоминске и районе</h1>
+  <p>Работаем в паре: Ильдар и Ярослав. Замена проводки, розетки, щитки, подключение техники. Без пыли, с гарантией, выезд 24/7.</p>
+  <div class="hero-actions">
+    <a href="tel:+79934189372" class="btn btn-primary">Позвонить Ильдару</a>
+        <a href="https://wa.me/qr/5LNS32RBH6FWG1" class="btn btn-outline" target="_blank">Написать в WhatsApp</a>
+        <a href="https://t.me/DARK_DRAGON_10" class="btn btn-outline" target="_blank">Написать в Telegram</a>
+        <a href="https://max.ru/u/f9LHodD0cOJvN-ixyxDvAhlna3T7KhS7kyEzyNyjLPlKoDhf28fJbgNohTc" class="btn btn-outline" target="_blank">Написать в MAX</a>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="container">
+    <h2 class="section-title">Наши услуги</h2>
+    <p class="section-subtitle">Полный цикл электромонтажных работ для квартир, домов и офисов</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Замена проводки под ключ</h3>
+        <p>Полная замена электропроводки в квартире или доме: от проекта до сдачи в эксплуатацию.</p>
+      </div>
+      <div class="service-card">
+        <h3>Розетки и выключатели</h3>
+        <p>Установка, замена и перенос розеток, выключателей, проходных и диммеров.</p>
+      </div>
+      <div class="service-card">
+        <h3>Электрощитки</h3>
+        <p>Сборка, замена и модернизация щитков, установка автоматов и УЗО.</p>
+      </div>
+      <div class="service-card">
+        <h3>Подключение техники</h3>
+        <p>Электроплита, посудомойка, кондиционер, бойлер и другая бытовая техника.</p>
+      </div>
+      <div class="service-card">
+        <h3>Аварийное обслуживание</h3>
+        <p>Выезд 24/7. Устранение короткого замыкания, отключения света, искрения.</p>
+      </div>
+      <div class="service-card">
+        <h3>Диагностика сети</h3>
+        <p>Проверка заземления, измерение сопротивления, поиск неисправностей.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="container">
+    <h2 class="section-title">Почему выбирают нас</h2>
+    <p class="section-subtitle">Честная работа без скрытых платежей</p>
+    <div class="benefits-grid">
+      <div class="benefit">
+        <span class="num">2</span>
+        <h4>Работаем в паре</h4>
+        <p>Ильдар и Ярослав — ответственно и оперативно.</p>
+      </div>
+      <div class="benefit">
+        <span class="num">✅</span>
+        <h4>Без пыли</h4>
+        <p>Профессиональный инструмент, минимальный мусор при штроблении.</p>
+      </div>
+      <div class="benefit">
+        <span class="num">🛡️</span>
+        <h4>Гарантия</h4>
+        <p>Гарантируем качество выполненных электромонтажных работ.</p>
+      </div>
+      <div class="benefit">
+        <span class="num">24/7</span>
+        <h4>Аварийный выезд</h4>
+        <p>Приедем в любое время суток при отсутствии света или коротком замыкании.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="portfolio">
+  <div class="container">
+    <h2 class="section-title">Наши работы</h2>
+    <p class="section-subtitle">Примеры выполненных объектов в Наро-Фоминске и районе</p>
+    <div class="portfolio-grid">
+          <div class="portfolio-item" data-title="Электрощиток, загородный дом">
+            <img src="img/portfolio/schitok1.jpg" alt="Электрощиток в загородном доме">
+          </div>
+          <div class="portfolio-item" data-title="Установка розеток и выключателей">
+            <img src="img/portfolio/rosetki.webp" alt="Розетки и выключатели в бетонной стене">
+          </div>
+          <div class="portfolio-item" data-title="Электрощиток ABB с документацией">
+            <img src="img/portfolio/schitok2.jpg" alt="Электрощиток ABB с схемами подключения">
+          </div>
+          <div class="portfolio-item" data-title="Прокладка кабеля по потолку">
+            <img src="img/portfolio/potolok.jpg" alt="Прокладка кабеля по потолку из ОСБ">
+          </div>
+          <div class="portfolio-item" data-title="Кабели на блоковой стене">
+            <img src="img/portfolio/stena.jpg" alt="Электропроводка на блоковой стене">
+          </div>
+        </div>
+  </div>
+</section>
+
+<section class="section" id="reviews">
+  <div class="container">
+    <h2 class="section-title">Отзывы клиентов</h2>
+    <p class="section-subtitle">Что говорят о нашей работе</p>
+    <div class="reviews-grid">
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>Заменяли проводку в двухкомнатной квартире. Сделали аккуратно, без лишнего мусора, по договорённой цене. Рекомендуем.</p>
+        <div class="author">Андрей <span>г. Наро-Фоминск</span></div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>Вызвали ночью из-за искрения в щитке. Приехали за час, устранили неисправность. Работают оперативно и честно.</p>
+        <div class="author">Елена <span>г. Наро-Фоминск</span></div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>Установили розетки и подключили посудомойку. Всё аккуратно, гарантия выдали. Обратимся ещё.</p>
+        <div class="author">Максим <span>Наро-Фоминский р-н</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="container">
+    <h2 class="section-title">Частые вопросы</h2>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Сколько стоит замена проводки в квартире?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">Цена зависит от площади, количества точек и сложности работ. После выезда на объект и осмотра мы называем точную стоимость — без скрытых платежей.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Есть ли гарантия на работы?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">Да, предоставляем гарантию на все выполненные электромонтажные работы. Срок гарантии обговаривается индивидуально.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Выезжаете ли вы ночью?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">Да, аварийный выезд работает круглосуточно. При отсутствии света, коротком замыкании или искрении приедем в любое время суток.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Работаете ли вы в частных домах?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">Да, выполняем электромонтаж в квартирах, частных домах и офисах в Наро-Фоминске и прилегающих районах Калужской области.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="order" style="padding-top:30px;">
+  <div class="container">
+    <h2 class="section-title">Оставьте заявку</h2>
+    <p class="section-subtitle">Опишите задачу, и мы соориентируем по стоимости и срокам</p>
+    <div class="form-wrap">
+      <form id="orderForm">
+        <div class="form-group">
+          <label for="clientName">Ваше имя</label>
+          <input type="text" id="clientName" placeholder="Иван" required>
+        </div>
+        <div class="form-group">
+          <label for="clientPhone">Телефон</label>
+          <input type="tel" id="clientPhone" placeholder="+7 (___) ___-__-__" required>
+        </div>
+        <div class="form-group">
+          <label for="clientAddress">Адрес объекта</label>
+          <input type="text" id="clientAddress" placeholder="г. Наро-Фоминск, улица, дом">
+        </div>
+        <div class="form-group">
+          <label for="clientMessage">Что нужно сделать?</label>
+          <textarea id="clientMessage" rows="3" placeholder="Например: заменить проводку в двухкомнатной квартире, установить щиток"></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Отправить заявку</button>
+      </form>
+      <div class="form-msg" id="formMsg">Заявка отправлена! Мы свяжемся с вами в ближайшее время.</div>
+    </div>
+  </div>
+</section>
+
+<section id="contacts" class="section" style="padding-bottom: 20px;">
+  <div class="container">
+    <h2 class="section-title">Контакты</h2>
+    <div class="contacts">
+      <div class="contact-card">
+        <h4>Ильдар</h4>
+        <p>Электрик, приём заявок</p>
+        <a href="tel:+79934189372" class="btn btn-primary">+7 (993) 418-93-72</a>
+      </div>
+      <div class="contact-card">
+        <h4>Ярослав</h4>
+        <p>Электрик, выезд на объект</p>
+        <a href="tel:+79005722597" class="btn btn-primary">+7 (900) 572-25-97</a>
+      </div>
+      <div class="contact-card">
+        <h4>Регион</h4>
+        <p>г. Наро-Фоминск, Калужская область и прилегающие районы</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 ВОЛЬТ СЕРВИС — Электромонтаж. Наро-Фоминск, Калужская область.</p>
+    <p style="margin-top:8px;">Замените номера телефонов и ссылки на мессенджеры на реальные перед публикацией.</p>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop">↑</button>
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  menuToggle.addEventListener('click', function() {
+    const isOpen = navLinks.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', isOpen);
+  });
+
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  const phoneInput = document.getElementById('clientPhone');
+  phoneInput.addEventListener('input', function(e) {
+    let value = e.target.value.replace(/\D/g, '');
+    if (value.startsWith('7')) value = value.slice(1);
+    if (value.startsWith('8')) value = value.slice(1);
+    let formatted = '+7 ';
+    if (value.length > 0) formatted += '(' + value.substring(0, 3);
+    if (value.length >= 3) formatted += ') ' + value.substring(3, 6);
+    if (value.length >= 6) formatted += '-' + value.substring(6, 8);
+    if (value.length >= 8) formatted += '-' + value.substring(8, 10);
+    e.target.value = formatted;
+  });
+
+  document.getElementById('orderForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('clientName').value;
+    const phone = document.getElementById('clientPhone').value;
+    const address = document.getElementById('clientAddress').value;
+    const message = document.getElementById('clientMessage').value;
+
+    const body = `Новая заявка с сайта ВОЛЬТ СЕРВИС:%0AИмя: ${encodeURIComponent(name)}%0AТелефон: ${encodeURIComponent(phone)}%0AАдрес: ${encodeURIComponent(address)}%0AЗадача: ${encodeURIComponent(message)}`;
+
+    window.location.href = `mailto:temirbulatov825@gmail.com?subject=%D0%97%D0%B0%D1%8F%D0%B2%D0%BA%D0%B0+%D1%81+%D1%81%D0%B0%D0%B9%D1%82+%D0%92%D0%9E%D0%9B%D0%A2+%D0%A1%D0%95%D0%A0%D0%92%D0%98%D0%A1&body=${body}`;
+
+    document.getElementById('formMsg').style.display = 'block';
+    document.getElementById('orderForm').reset();
+    setTimeout(() => { document.getElementById('formMsg').style.display = 'none'; }, 5000);
+  });
+
+  const scrollTop = document.getElementById('scrollTop');
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+      scrollTop.classList.add('show');
+    } else {
+      scrollTop.classList.remove('show');
+    }
+  });
+  scrollTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+</body>
+</html>
